@@ -4,6 +4,7 @@ import Card from "./components/Card";
 import Posts from "./pages/posts/Posts";
 import MainRouter from "./Router";
 
+
 import './App.css';
 
 function App() {

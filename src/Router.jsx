@@ -1,6 +1,6 @@
 import {
     BrowserRouter ,
-    
+    HashRouter,
     Route,
     Routes,
   } from "react-router-dom";
@@ -12,7 +12,8 @@ import {
     return (
         <>
           
-          <BrowserRouter>
+          {/* <BrowserRouter> */}
+          <HashRouter>
             <Routes>
               
               <Route exact path="/"  element={<Posts/>} />
@@ -22,7 +23,8 @@ import {
 
               
             </Routes>
-          </BrowserRouter>
+            </HashRouter>
+          {/* </BrowserRouter> */}
         </>
       );
   }
