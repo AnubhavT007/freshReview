@@ -12,8 +12,8 @@ import {
     return (
         <>
           
-          {/* <BrowserRouter> */}
-          <HashRouter>
+          <BrowserRouter>
+          {/* <HashRouter> */}
             <Routes>
               
               <Route exact path="/"  element={<Posts/>} />
@@ -23,8 +23,8 @@ import {
 
               
             </Routes>
-            </HashRouter>
-          {/* </BrowserRouter> */}
+            {/* </HashRouter> */}
+          </BrowserRouter>
         </>
       );
   }
