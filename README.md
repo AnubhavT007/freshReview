@@ -2,10 +2,10 @@
 
 
 To Run this app locally :-
-    1. clone this repository to your local pc.
-    2. run command "npm install" in the terminal inside the folder were you have cloned the app.
-    3. run command "npm start"
-    4. App will start in localhost.
+1. clone this repository to your local pc.
+2. run command "npm install" in the terminal inside the folder were you have cloned the app.
+3. run command "npm start"
+4. App will start in localhost.
 
 ## Available Scripts
 
