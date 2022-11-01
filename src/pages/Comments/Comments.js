@@ -13,7 +13,7 @@ const [isFetchingC,setIsFetchingC] = useState(false);
 
     const postId = localStorage.getItem("postId");
     var posts = JSON.parse(postId);
-    console.log("post is "+posts.id)
+    // console.log("post is "+posts.id)
   
 
 
@@ -23,7 +23,9 @@ const [isFetchingC,setIsFetchingC] = useState(false);
             `https://gorest.co.in/public/v2/users/${posts?.user_id}`
         );
         const user = await getUser.json();
-        console.log("user Fetched is "+user)
+        // const user = await getUser;
+        var temp = JSON.stringify(user);
+        console.log("user Fetched is "+temp)
         setUser(user)
         setIsFetching(false)
     };
@@ -62,6 +64,7 @@ const [isFetchingC,setIsFetchingC] = useState(false);
       userEmail={user?.email}
       userGender={user?.gender}
       fromComments={true}
+      userId = {posts?.user_id}
      />
 
     {isFetching && (

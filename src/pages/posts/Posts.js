@@ -26,8 +26,9 @@ function Posts() {
         );
         const data = await response.json();
         setValue([...value, ...data]);
+        // setValue([data]);
 
-        // setValue([...data]);
+        
 
 
         setIsFetching(false)
@@ -102,6 +103,7 @@ function Posts() {
                     userEmail="email@mail.com"
                     userGender="Gender"
                     postId={item.id}
+                    userId={item.user_id}
                 />
                 </>
             )

@@ -1,8 +1,9 @@
 import React from "react";
 import { redirect, useNavigate } from "react-router-dom";
 import "./Card.css"
+import UserDetails from "./UserDetails";
 
-function Card({username,postTitle,postBody,userEmail,userGender,postId,fromComments}){
+function Card({username,postTitle,postBody,userEmail,userGender,postId,fromComments,userId}){
 let navigate = useNavigate()
 
 
@@ -36,7 +37,7 @@ let navigate = useNavigate()
                 <p>{postBody}</p>
             </div>
 
-            <div className="post__options">
+            {/* <div className="post__options">
                 <div className="post__option">
                     
                     <p>{username}</p>
@@ -50,7 +51,15 @@ let navigate = useNavigate()
                     <p>{userGender}</p>
                 </div>
                 
-            </div>{fromComments!==true?
+            </div> */}
+            <div className="post__options">
+                
+                <UserDetails
+                userId={userId}
+                />
+            </div>
+
+            {fromComments!==true?
             <div className="post__option__bottom" onClick={()=>openComments()}>
                 View Comments
             </div> : <div></div>}
